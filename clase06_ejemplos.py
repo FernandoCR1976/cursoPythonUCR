@@ -23,9 +23,26 @@ def ejecutar_calculos():
 #ejecutar_calculos()
 
 #Hacer un programa que reciba el radio de un circulo y calcule su area y perimetro. El programa debe de mostrar el resultado en pantalla. Para esto se deben de crear dos funciones, una para calcular el area y otra para calcular el perimetro. Ambas funciones deben de recibir el radio del circulo como parametro y retornar el resultado. El programa debe de pedir al usuario que ingrese el radio del circulo y luego mostrar el area y el perimetro calculados por las funciones.
+def ingreso_radio():
+
+    radio = float(input("Ingrese el radio del circulo: "))
+    return radio
+def calcular_area_circulo(r):
+    area = 3.1416 * r * r
+    return area     
+def calcular_perimetro_circulo(r):
+    perimetro = 2 * 3.1416 * r
+    return perimetro
+def ejecutar_calculos_circulo():
+    radio_circulo = ingreso_radio()
+    area_circulo = calcular_area_circulo(radio_circulo)
+    perimetro_circulo = calcular_perimetro_circulo(radio_circulo)
+    print(f"El area del circulo es: {area_circulo}")
+    print(f"El perimetro del circulo es: {perimetro_circulo}")
+
+#ejecutar_calculos_circulo()
 
 #Hacer un programa que reciba las notas de un estudiante y calcule su promedio. El programa debe de pedir la cantidad de notas que se van a ingresar, luego debe de pedir al usuario que ingrese cada una de las notas y almacenarlas en una lista. Luego se debe de crear una funcion que reciba la lista de notas como parametro y calcule el promedio, retornando el resultado. Finalmente, el programa debe de mostrar el promedio calculado por la funcion.
-
 def cantidad_notas():
     cantidad = int(input("Ingrese la cantidad de notas: "))
     return cantidad
