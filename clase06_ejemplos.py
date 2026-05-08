@@ -24,6 +24,12 @@ def ejecutar_calculos():
 
 #Hacer un programa que reciba el radio de un circulo y calcule su area y perimetro. El programa debe de mostrar el resultado en pantalla. Para esto se deben de crear dos funciones, una para calcular el area y otra para calcular el perimetro. Ambas funciones deben de recibir el radio del circulo como parametro y retornar el resultado. El programa debe de pedir al usuario que ingrese el radio del circulo y luego mostrar el area y el perimetro calculados por las funciones.
 
+def calcular_area_circulo(r):
+    pi = 3.1416
+    area = pi * (r ** 2)
+    return area 
+calcular_area_circulo(5)
+
 #Hacer un programa que reciba las notas de un estudiante y calcule su promedio. El programa debe de pedir la cantidad de notas que se van a ingresar, luego debe de pedir al usuario que ingrese cada una de las notas y almacenarlas en una lista. Luego se debe de crear una funcion que reciba la lista de notas como parametro y calcule el promedio, retornando el resultado. Finalmente, el programa debe de mostrar el promedio calculado por la funcion.
 
 def cantidad_notas():
@@ -48,3 +54,25 @@ def ejecutar_calculo_promedio():
     print(f"El promedio de las notas es: {promedio}")
 
 ejecutar_calculo_promedio()
+
+
+
+#Crea una función que no reciba parámetros y que genere y retorne un número aleatorio entre 1 y 100 junto con su clasificación:
+
+# Bajo (1–33)
+# Medio (34–66)
+# Alto (67–100)
+
+import random
+def generar_numero_aleatorio():
+    numero = random.randint(1, 100)
+    if numero <= 33:
+        clasificacion = "Bajo"
+    elif numero <= 66:
+        clasificacion = "Medio"
+    else:
+        clasificacion = "Alto"
+    return numero, clasificacion
+numero, clasificacion = generar_numero_aleatorio()
+print(f"El número generado es: {numero} y su clasificación es: {clasificacion}")
+generar_numero_aleatorio()
