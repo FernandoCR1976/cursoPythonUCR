@@ -18,15 +18,27 @@ class Estudiante:
 
     def mostrar_notas(self):
         contador = 1
-        for nota in self.notas:
+        if len(self.notas) != 0:
+            for nota in self.notas:
             
-            print(f"Nota {contador}: {nota}")
-            contador += 1
+                print(f"Nota {contador}: {nota}")
+                contador += 1
+        else:
+            print("El estudiante no tiene notas registradas")
+        return
+        
+    def no_hago_nada(self):
+        return
+
 
     def calcular_promedio(self):
-        promedio = sum(self.notas)/ len(self.notas)
-        print(f"El estudiante {self.nombre} obtuvo un promedio de: {promedio:.2f}\n")
-
+        if len(self.notas) != 0:
+            promedio = sum(self.notas)/ len(self.notas)
+            print(f"El estudiante {self.nombre} obtuvo un promedio de: {promedio:.2f}\n")
+        else:
+            print("El estudiante no tiene notas registradas")
+        return
+    
 estudiantes = []
 
 #Creando una FUNCION para agregar estudiantes 
@@ -61,8 +73,8 @@ def mostrar_estudiante():
     for est in estudiantes:
         if est.id == id_busqueda:
             est.to_string()
-            #est.mostrar_notas()
-            #est.calcular_promedio()
+            est.mostrar_notas()
+            est.calcular_promedio()
             #Se debe de validar si el estudiante tiene notas para mostrar el promedio
 
 def mostrar_todos_estudiantes():
